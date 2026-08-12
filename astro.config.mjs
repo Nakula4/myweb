@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // 1. TAMBAHKAN DUA BARIS INI UNTUK GITHUB PAGES
   site: 'https://Nakula4.github.io', 
-  base: '/Btools', // SESUAIKAN dengan nama repositori GitHub Anda
+  base: '/myweb', // SESUAIKAN dengan nama repositori GitHub Anda
   
   // Konfigurasi Tailwind Vite Anda (biarkan apa adanya)
   vite: {
