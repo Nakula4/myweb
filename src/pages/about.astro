@@ -1,0 +1,160 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+---
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>About | Bagus Wicaksono</title>
+
+    <ClientRouter />
+
+    <style>
+      @keyframes blob {
+        0% {
+          transform: translate(0px, 0px) scale(1);
+        }
+        33% {
+          transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+        100% {
+          transform: translate(0px, 0px) scale(1);
+        }
+      }
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-900 text-gray-100 font-sans antialiased selection:bg-emerald-500 selection:text-white relative min-h-screen flex flex-col"
+  >
+    <div
+      transition:persist="background"
+      class="fixed inset-0 z-0 overflow-hidden pointer-events-none"
+    >
+      <div
+        class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-emerald-600 rounded-full mix-blend-screen filter blur-[128px] opacity-30 animate-blob"
+      >
+      </div>
+      <div
+        class="absolute top-[20%] right-[-10%] w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[128px] opacity-30 animate-blob animation-delay-2000"
+      >
+      </div>
+      <div
+        class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-teal-600 rounded-full mix-blend-screen filter blur-[128px] opacity-30 animate-blob animation-delay-4000"
+      >
+      </div>
+    </div>
+
+    <header
+      class="sticky top-0 z-50 w-full bg-gray-900/60 backdrop-blur-md transition-all"
+    >
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-end">
+        <nav class="flex space-x-6 text-sm font-medium">
+          <a href="/" class="text-gray-400 hover:text-white transition">Home</a>
+          <a
+            href="/about"
+            class="text-emerald-400 hover:text-emerald-300 transition">About</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- KONTAINER UTAMA -->
+    <div class="max-w-6xl mx-auto w-full relative z-10 flex flex-col grow mt-8">
+      <main class="space-y-12 grow px-6 pb-20">
+        <header>
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+            Halo, saya <span class="text-emerald-400">Bagus Wicaksono.</span>
+          </h1>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Saya adalah lulusan Teknik Informatika di Universitas Pamulang yang
+            bersemangat dalam pengembangan perangkat lunak. Meskipun menggunakan
+            AI sebagai asisten saya, saya dapat memahami sekaligus jadi metode
+            pembelajaran yang efektif. Saya berusaha dalam membangun aplikasi
+            web dan android. Saya berkomitmen untuk terus belajar dan
+            beradaptasi dengan teknologi terbaru, serta berkontribusi pada
+            proyek yang inovatif dan bermanfaat bagi saya sendiri dan sekitar.
+          </p>
+        </header>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 border-b border-gray-700 pb-2">
+            Metodologi & Pendekatan
+          </h2>
+          <p class="text-gray-400 leading-relaxed">
+            Dalam mengembangkan software, saya sangat mengedepankan fundamental
+            yang kuat. Saya terbiasa merancang arsitektur aplikasi (<em
+              >clean architecture</em
+            >), melakukan normalisasi <em>database</em>, serta menerapkan siklus
+            pengembangan dengan<strong class="text-gray-200"> metode </strong>
+            yang dibutuhkan secara aktif.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 border-b border-gray-700 pb-2">
+            Apa yang saya pelajari
+          </h2>
+          <div class="flex flex-wrap gap-3 mb-4">
+            <span
+              class="bg-gray-800 border border-gray-700 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-700 transition cursor-default"
+              >Astro</span
+            >
+            <span
+              class="bg-gray-800 border border-gray-700 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-700 transition cursor-default"
+              >Flutter</span
+            >
+            <span
+              class="bg-gray-800 border border-gray-700 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-700 transition cursor-default"
+              >HTML/CSS</span
+            >
+            <span
+              class="bg-gray-800 border border-gray-700 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-700 transition cursor-default"
+              >Java</span
+            >
+            <span
+              class="bg-gray-800 border border-gray-700 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-700 transition cursor-default"
+              >Git / GitHub</span
+            >
+          </div>
+          <p class="text-gray-500 text-sm italic flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-emerald-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              ><path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path></svg
+            >
+            Developer belum bersertifikasi di platform Dicoding.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 border-b border-gray-700 pb-2">
+            Di Luar Pengkodean
+          </h2>
+          <p class="text-gray-400 leading-relaxed">
+            Saya senang eksplorasi internet, mengenai tren <em>AI</em> maupun tutorial
+            dari <em>Youtube</em>.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
